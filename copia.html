@@ -75,7 +75,7 @@
                         min-width: 20%;
                         position: absolute;
                         top:0;
-                        right:-20%;
+                        right:-100%;
                         z-index: 999;
                     }
                     
@@ -90,6 +90,7 @@
             100%{
                 right: 0%;
             }
+        
         }@keyframes ocultar {
             0% {
                 right: 0%;
@@ -106,6 +107,29 @@
         }
         .boton{
             cursor: pointer;
+        }
+        @media only screen and (max-width: 900px) {
+            .navbar{
+                width: 100%;
+                text-align: center;
+                min-height: auto !important;
+            }
+            @keyframes mostrar {
+                0% {
+                    right:-100%;
+                }
+                100%{
+                    right: 0%;
+                }
+            
+            }@keyframes ocultar {
+                0% {
+                    right: 0%;
+                }
+                100%{
+                    right:-100%;
+                }
+            }
         }
     </style>
 </head>

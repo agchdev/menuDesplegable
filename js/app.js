@@ -19,11 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navbar.classList.add("ocultar");
         setTimeout(() => {
-            navbar.style.right = "-20%";
+            navbar.style.right = "-100%";
             navbar.classList.remove("ocultar");
         }, 1000);
         
     });
-
-    navbar.addEventListener("mouse")
+    
 })
