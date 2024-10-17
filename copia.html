@@ -60,6 +60,7 @@
                         font-size: 2rem;
                         background-color: transparent;
                         border:none;
+                        cursor: pointer;
                         /* &:hover div.navbar{
                             left: 80%;
                         } */
@@ -74,15 +75,37 @@
                         min-width: 20%;
                         position: absolute;
                         top:0;
-                        right:0%;
+                        right:-20%;
                         z-index: 999;
-                        transition: right 0.5s;
-
-                        
                     }
+                    
                 }
             }
             
+        }
+        @keyframes mostrar {
+            0% {
+                right:-20%;
+            }
+            100%{
+                right: 0%;
+            }
+        }@keyframes ocultar {
+            0% {
+                right: 0%;
+            }
+            100%{
+                right:-20%;
+            }
+        }
+        .mostrar{
+            animation: mostrar 1s ease both;
+        }
+        .ocultar{
+            animation: ocultar 1s ease both;
+        }
+        .boton{
+            cursor: pointer;
         }
     </style>
 </head>
@@ -95,7 +118,7 @@
             <div class="menu">
                 <button>&#x268C;</button>
                 <div class="navbar">
-                    <button>&#x2715;</button>
+                    <button class="boton">&#x2715;</button>
 
                     <a href="#">Home</a>
                     <a href="#">Servicios</a>
