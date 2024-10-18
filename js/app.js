@@ -24,5 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
         
     });
+
+    navbar.addEventListener("mouseleave", () => {
+        navbar.classList.add("ocultar");
+        setTimeout(() => {
+            navbar.style.right = "-100%";
+            navbar.classList.remove("ocultar");
+        }, 1000);
+    })
     
 })
